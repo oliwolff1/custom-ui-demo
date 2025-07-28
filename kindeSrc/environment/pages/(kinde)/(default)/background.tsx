@@ -8,15 +8,6 @@ import {
 export default function Component() {
   return (
     <div style={styles.container}>
-      {/* Animated Background Animals */}
-      <div style={styles.backgroundAnimals}>
-        <img src="/images/cartoon-elephant.png" alt="" style={{ ...styles.animal, ...styles.elephant }} />
-        <img src="/images/cartoon-monkey.png" alt="" style={{ ...styles.animal, ...styles.monkey }} />
-        <img src="/images/cartoon-giraffe.png" alt="" style={{ ...styles.animal, ...styles.giraffe }} />
-        <img src="/images/cartoon-rabbit.png" alt="" style={{ ...styles.animal, ...styles.rabbit }} />
-        <img src="/images/cartoon-lion.png" alt="" style={{ ...styles.animal, ...styles.lion }} />
-        <img src="/images/cartoon-panda.png" alt="" style={{ ...styles.animal, ...styles.panda }} />
-      </div>
 
       {/* Content Container for Kinde Auth Form */}
       <div style={styles.contentContainer}>
