@@ -266,9 +266,10 @@ const Layout = async ({ request, context }) => {
               <h1 className="title">Imperial Portal</h1>
               <p className="subtitle">Secure Access Required</p>
             </div>
-
             <div className="widget-container">{getKindeWidget()}</div>
-            
+
+
+
             <div className="footer">
               <p className="footer-text">May the Force be with you</p>
             </div>
