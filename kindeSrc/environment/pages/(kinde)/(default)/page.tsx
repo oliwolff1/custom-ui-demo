@@ -34,7 +34,14 @@ const Layout = async ({request, context}) => {
             primaryButtonBackgroundColor: "#333333",
             primaryButtonColor: "#fff",
             inputBorderRadius: "0.5rem"
-          })}}
+          })}
+          
+          /* Kinde widget spacing using CSS custom properties */
+          --kinde-control-spacing: 2rem;
+          --kinde-control-label-spacing: 1.5rem;
+          --kinde-control-input-spacing: 1.5rem;
+          --kinde-button-spacing: 2rem;
+          --kinde-widget-spacing-content: 2rem;
           `}
         </style>
         <style nonce={getKindeNonce()}>
@@ -305,18 +312,32 @@ const Layout = async ({request, context}) => {
               display: none;
             }
 
-            /* Add spacing between Kinde widget elements */
+            /* Add spacing between Kinde widget elements using Kinde's CSS custom properties */
             [data-kinde-control] {
-              margin-bottom: 2rem;
+              margin-bottom: var(--kinde-control-spacing, 2rem);
             }
 
             [data-kinde-control] input {
-              margin-bottom: 1.5rem;
+              margin-bottom: var(--kinde-control-input-spacing, 1.5rem);
             }
 
             [data-kinde-control] button {
-              margin-top: 1rem;
-              margin-bottom: 1rem;
+              margin-top: var(--kinde-button-spacing, 1rem);
+              margin-bottom: var(--kinde-button-spacing, 1rem);
+            }
+
+            /* Force spacing on Kinde widget elements */
+            .kinde-widget [data-kinde-control] {
+              margin-bottom: 2rem !important;
+            }
+
+            .kinde-widget [data-kinde-control] input {
+              margin-bottom: 1.5rem !important;
+            }
+
+            .kinde-widget [data-kinde-control] button {
+              margin-top: 1rem !important;
+              margin-bottom: 1rem !important;
             }
 
             /* Additional spacing for form elements */
