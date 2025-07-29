@@ -307,15 +307,25 @@ const Layout = async ({request, context}) => {
 
             /* Add spacing between Kinde widget elements */
             [data-kinde-control] {
-              margin-bottom: 1.5rem;
+              margin-bottom: 2rem;
             }
 
             [data-kinde-control] input {
-              margin-bottom: 1rem;
+              margin-bottom: 1.5rem;
             }
 
             [data-kinde-control] button {
-              margin-top: 0.5rem;
+              margin-top: 1rem;
+              margin-bottom: 1rem;
+            }
+
+            /* Additional spacing for form elements */
+            [data-kinde-control] > * {
+              margin-bottom: 1rem;
+            }
+
+            [data-kinde-control] > *:last-child {
+              margin-bottom: 0;
             }
 
             /* Responsive design */
@@ -351,9 +361,7 @@ const Layout = async ({request, context}) => {
               {getKindeWidget()}
             </div>
 
-            <div className="c-footer">
-              <p>No account? <a href={getKindeRegisterUrl()}>Sign up for free</a></p>
-            </div>
+
           </div>
         </div>
       </body>
