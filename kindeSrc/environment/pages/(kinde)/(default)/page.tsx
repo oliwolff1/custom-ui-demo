@@ -64,10 +64,13 @@ const Layout = async ({request, context}) => {
                 width: 100%;
                 height: 100%;
                 background-image: 
-                    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.3) 0%, transparent 50%),
-                    radial-gradient(circle at 80% 20%, rgba(255,255,255,0.2) 0%, transparent 50%),
-                    radial-gradient(circle at 40% 70%, rgba(255,255,255,0.25) 0%, transparent 50%),
-                    radial-gradient(circle at 90% 80%, rgba(255,255,255,0.15) 0%, transparent 50%);
+                    radial-gradient(circle at 15% 25%, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 40%, transparent 60%),
+                    radial-gradient(circle at 85% 15%, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.08) 45%, transparent 65%),
+                    radial-gradient(circle at 35% 75%, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.05) 50%, transparent 70%),
+                    radial-gradient(circle at 75% 85%, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.03) 55%, transparent 75%),
+                    radial-gradient(circle at 50% 45%, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.02) 60%, transparent 80%),
+                    radial-gradient(circle at 25% 60%, rgba(255,255,255,0.15) 0%, transparent 70%),
+                    radial-gradient(circle at 90% 50%, rgba(255,255,255,0.18) 0%, transparent 65%);
                 pointer-events: none;
                 z-index: 1;
             }
