@@ -49,7 +49,7 @@ const Layout = async ({request, context}) => {
             body {
                 margin: 0;
                 padding: 0;
-                background: linear-gradient(135deg, #87ceeb 0%, #98d8e8 50%, #b0e0e6 100%);
+                background: linear-gradient(180deg, #4a90e2 0%, #7bb3f0 30%, #a8d0f0 60%, #e8f4fd 100%);
                 min-height: 100vh;
                 position: relative;
                 overflow-x: hidden;
@@ -64,18 +64,17 @@ const Layout = async ({request, context}) => {
                 width: 100%;
                 height: 100%;
                 background-image: 
-                    radial-gradient(circle at 15% 25%, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 40%, transparent 60%),
-                    radial-gradient(circle at 85% 15%, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.08) 45%, transparent 65%),
-                    radial-gradient(circle at 35% 75%, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.05) 50%, transparent 70%),
-                    radial-gradient(circle at 75% 85%, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.03) 55%, transparent 75%),
-                    radial-gradient(circle at 50% 45%, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.02) 60%, transparent 80%),
-                    radial-gradient(circle at 25% 60%, rgba(255,255,255,0.15) 0%, transparent 70%),
-                    radial-gradient(circle at 90% 50%, rgba(255,255,255,0.18) 0%, transparent 65%);
+                    radial-gradient(ellipse at 20% 60%, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.2) 30%, transparent 50%),
+                    radial-gradient(ellipse at 80% 70%, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.15) 35%, transparent 55%),
+                    radial-gradient(ellipse at 40% 85%, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 40%, transparent 60%),
+                    radial-gradient(ellipse at 70% 45%, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.08) 45%, transparent 65%),
+                    radial-gradient(ellipse at 15% 80%, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.05) 50%, transparent 70%),
+                    radial-gradient(ellipse at 90% 30%, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.03) 55%, transparent 75%);
                 pointer-events: none;
                 z-index: 1;
             }
 
-            /* Grid lines effect */
+            /* Abstract lines/arcs effect */
             body::after {
                 content: '';
                 position: fixed;
@@ -84,9 +83,11 @@ const Layout = async ({request, context}) => {
                 width: 100%;
                 height: 100%;
                 background-image: 
-                    linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
-                background-size: 50px 50px;
+                    radial-gradient(circle at 30% 40%, transparent 0%, transparent 45%, rgba(255,255,255,0.08) 46%, transparent 47%),
+                    radial-gradient(circle at 70% 60%, transparent 0%, transparent 50%, rgba(255,255,255,0.06) 51%, transparent 52%),
+                    radial-gradient(circle at 50% 20%, transparent 0%, transparent 55%, rgba(255,255,255,0.04) 56%, transparent 57%),
+                    linear-gradient(45deg, transparent 0%, transparent 40%, rgba(255,255,255,0.03) 41%, transparent 42%),
+                    linear-gradient(-45deg, transparent 0%, transparent 45%, rgba(255,255,255,0.02) 46%, transparent 47%);
                 pointer-events: none;
                 z-index: 2;
             }
