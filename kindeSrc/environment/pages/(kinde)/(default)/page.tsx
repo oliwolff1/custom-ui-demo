@@ -47,7 +47,7 @@ const Layout = async ({request, context}) => {
 
             body {
               font-family: -apple-system, system-ui, BlinkMacSystemFont, Helvetica, Arial, Segoe UI, Roboto, sans-serif;
-              background: linear-gradient(135deg, #87CEEB 0%, #B0E0E6 50%, #E0F6FF 100%);
+              background: linear-gradient(180deg, #4A90E2 0%, #87CEEB 30%, #E0F6FF 100%);
               min-height: 100vh;
               position: relative;
               overflow-x: hidden;
@@ -77,6 +77,67 @@ const Layout = async ({request, context}) => {
               top: 20%;
               right: 15%;
               animation: float 8s ease-in-out infinite reverse;
+            }
+
+            /* Additional clouds */
+            .cloud-1 {
+              position: fixed;
+              width: 180px;
+              height: 50px;
+              background: rgba(255, 255, 255, 0.7);
+              border-radius: 50px;
+              top: 60%;
+              left: 5%;
+              z-index: 1;
+              animation: float 7s ease-in-out infinite 1s;
+            }
+
+            .cloud-2 {
+              position: fixed;
+              width: 120px;
+              height: 35px;
+              background: rgba(255, 255, 255, 0.6);
+              border-radius: 50px;
+              top: 75%;
+              right: 8%;
+              z-index: 1;
+              animation: float 9s ease-in-out infinite 2s;
+            }
+
+            .cloud-3 {
+              position: fixed;
+              width: 160px;
+              height: 45px;
+              background: rgba(255, 255, 255, 0.5);
+              border-radius: 50px;
+              top: 45%;
+              left: 60%;
+              z-index: 1;
+              animation: float 5s ease-in-out infinite 0.5s;
+            }
+
+            .cloud-4 {
+              position: fixed;
+              width: 100px;
+              height: 30px;
+              background: rgba(255, 255, 255, 0.4);
+              border-radius: 50px;
+              top: 85%;
+              left: 40%;
+              z-index: 1;
+              animation: float 10s ease-in-out infinite 3s;
+            }
+
+            .cloud-5 {
+              position: fixed;
+              width: 140px;
+              height: 40px;
+              background: rgba(255, 255, 255, 0.6);
+              border-radius: 50px;
+              top: 30%;
+              left: 30%;
+              z-index: 1;
+              animation: float 8s ease-in-out infinite 1.5s;
             }
 
             @keyframes float {
@@ -216,51 +277,7 @@ const Layout = async ({request, context}) => {
               background: #444444;
             }
 
-            .c-divider {
-              display: flex;
-              align-items: center;
-              margin: 2rem 0;
-              color: #666;
-              font-size: 0.9rem;
-            }
 
-            .c-divider::before,
-            .c-divider::after {
-              content: '';
-              flex: 1;
-              height: 1px;
-              background: #e1e5e9;
-            }
-
-            .c-divider span {
-              padding: 0 1rem;
-            }
-
-            .c-social-buttons {
-              display: flex;
-              gap: 1rem;
-              justify-content: center;
-            }
-
-            .c-social-button {
-              flex: 1;
-              padding: 12px;
-              border: 1px solid #e1e5e9;
-              border-radius: 8px;
-              background: #fff;
-              cursor: pointer;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              transition: all 0.2s ease;
-              font-size: 14px;
-              font-weight: 500;
-            }
-
-            .c-social-button:hover {
-              border-color: #230078;
-              background: #f8f9fa;
-            }
 
             .c-footer {
               margin-top: 2rem;
@@ -281,8 +298,24 @@ const Layout = async ({request, context}) => {
 
             /* Hide elements we don't want */
             [data-kinde-control] label,
-            [data-kinde-control] a {
+            [data-kinde-control] a,
+            [data-kinde-control] img,
+            [data-kinde-control] .kinde-logo,
+            [data-kinde-control] .kinde-powered-by {
               display: none;
+            }
+
+            /* Add spacing between Kinde widget elements */
+            [data-kinde-control] {
+              margin-bottom: 1.5rem;
+            }
+
+            [data-kinde-control] input {
+              margin-bottom: 1rem;
+            }
+
+            [data-kinde-control] button {
+              margin-top: 0.5rem;
             }
 
             /* Responsive design */
@@ -296,15 +329,18 @@ const Layout = async ({request, context}) => {
                 font-size: 1.5rem;
               }
               
-              .c-social-buttons {
-                flex-direction: column;
-              }
+
             }
           `}
         </style>
       </head>
       <body>
         <div className="abstract-lines"></div>
+        <div className="cloud-1"></div>
+        <div className="cloud-2"></div>
+        <div className="cloud-3"></div>
+        <div className="cloud-4"></div>
+        <div className="cloud-5"></div>
         <div data-kinde-root="/admin" className="c-container">
           <div className="c-login-card">
             <div className="c-icon"></div>
@@ -313,16 +349,6 @@ const Layout = async ({request, context}) => {
             
             <div className="c-widget">
               {getKindeWidget()}
-            </div>
-
-            <div className="c-divider">
-              <span>Or sign in with</span>
-            </div>
-
-            <div className="c-social-buttons">
-              <button className="c-social-button">Google</button>
-              <button className="c-social-button">Facebook</button>
-              <button className="c-social-button">Apple</button>
             </div>
 
             <div className="c-footer">
