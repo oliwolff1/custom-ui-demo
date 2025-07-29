@@ -69,18 +69,11 @@ const Layout = async ({request, context}) => {
                 display: flex;
                 gap: 1.5rem;
             }
-            .c-header img {
-                max-width: 120px;
-                height: auto;
-            }
           `}
         </style>
       </head>
       <body>
         <div data-kinde-root="/admin" className="c-container">
-          <header className="c-header">
-            <img src={getLogoUrl()} alt={context.widget.content.logo_alt} />
-          </header>
           <main>
             <div className="c-widget">
               <h1>{context.widget.content.heading}</h1>
