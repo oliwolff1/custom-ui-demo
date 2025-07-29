@@ -74,9 +74,6 @@ const Layout = async ({request, context}) => {
       </head>
       <body>
         <div data-kinde-root="/admin" className="c-container">
-          <header className="c-header">
-            <img src={getLogoUrl()} alt={context.widget.content.logo_alt} />
-          </header>
           <main>
             <div className="c-widget">
               <h1>{context.widget.content.heading}</h1>
@@ -84,22 +81,6 @@ const Layout = async ({request, context}) => {
               <div>{getKindeWidget()}</div>
             </div>
           </main>
-          <footer className="c-footer">
-            <p className="c-no-account-link">
-              No account? <a href={getKindeRegisterUrl()}>Sign up for free</a>
-            </p>
-            <ul className="c-footer-links">
-              <li>
-                <a href="">Privacy</a>
-              </li>
-              <li>
-                <a href="">Terms</a>
-              </li>
-              <li>
-                <a href="">Get help</a>
-              </li>
-            </ul>
-          </footer>
         </div>
       </body>
     </html>
