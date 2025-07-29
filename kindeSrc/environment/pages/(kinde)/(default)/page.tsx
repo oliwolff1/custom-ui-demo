@@ -29,7 +29,7 @@ const Layout = async ({request, context}) => {
         <style nonce={getKindeNonce()}>
           {`:root {
           ${setKindeDesignerCustomProperties({
-            baseBackgroundColor: "transparent",
+            baseBackgroundColor: "#ffffff",
             baseLinkColor: "#230078",
             buttonBorderRadius: "0.5rem",
             primaryButtonBackgroundColor: "#333333",
