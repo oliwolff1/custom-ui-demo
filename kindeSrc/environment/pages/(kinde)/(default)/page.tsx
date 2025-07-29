@@ -77,16 +77,63 @@ const Layout = async ({request, context}) => {
                     radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
                     radial-gradient(1px 1px at 90px 40px, #fff, transparent),
                     radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.6), transparent),
-                    radial-gradient(2px 2px at 160px 30px, #ddd, transparent);
+                    radial-gradient(2px 2px at 160px 30px, #ddd, transparent),
+                    radial-gradient(1px 1px at 200px 50px, #fff, transparent),
+                    radial-gradient(2px 2px at 250px 20px, rgba(255,255,255,0.9), transparent),
+                    radial-gradient(1px 1px at 300px 80px, #ddd, transparent),
+                    radial-gradient(2px 2px at 350px 40px, rgba(255,255,255,0.7), transparent),
+                    radial-gradient(1px 1px at 400px 60px, #fff, transparent),
+                    radial-gradient(2px 2px at 450px 10px, rgba(255,255,255,0.8), transparent),
+                    radial-gradient(1px 1px at 500px 70px, #ddd, transparent),
+                    radial-gradient(2px 2px at 550px 30px, rgba(255,255,255,0.6), transparent),
+                    radial-gradient(1px 1px at 600px 90px, #fff, transparent),
+                    radial-gradient(2px 2px at 650px 15px, rgba(255,255,255,0.9), transparent),
+                    radial-gradient(1px 1px at 700px 55px, #ddd, transparent),
+                    radial-gradient(2px 2px at 750px 25px, rgba(255,255,255,0.7), transparent),
+                    radial-gradient(1px 1px at 800px 75px, #fff, transparent),
+                    radial-gradient(2px 2px at 850px 35px, rgba(255,255,255,0.8), transparent),
+                    radial-gradient(1px 1px at 900px 65px, #ddd, transparent);
                 background-repeat: repeat;
-                background-size: 200px 100px;
-                animation: twinkle 20s linear infinite;
+                background-size: 950px 100px;
+                animation: twinkle 25s linear infinite;
+                z-index: -1;
+            }
+
+            /* Additional star layers for depth */
+            body::after {
+                content: '';
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: 
+                    radial-gradient(1px 1px at 50px 50px, rgba(255,255,255,0.4), transparent),
+                    radial-gradient(1px 1px at 150px 150px, rgba(255,255,255,0.3), transparent),
+                    radial-gradient(1px 1px at 250px 250px, rgba(255,255,255,0.5), transparent),
+                    radial-gradient(1px 1px at 350px 350px, rgba(255,255,255,0.2), transparent),
+                    radial-gradient(1px 1px at 450px 450px, rgba(255,255,255,0.4), transparent),
+                    radial-gradient(1px 1px at 550px 550px, rgba(255,255,255,0.3), transparent),
+                    radial-gradient(1px 1px at 650px 650px, rgba(255,255,255,0.5), transparent),
+                    radial-gradient(1px 1px at 750px 750px, rgba(255,255,255,0.2), transparent),
+                    radial-gradient(1px 1px at 850px 850px, rgba(255,255,255,0.4), transparent),
+                    radial-gradient(1px 1px at 950px 950px, rgba(255,255,255,0.3), transparent);
+                background-repeat: repeat;
+                background-size: 1000px 1000px;
+                animation: twinkleSlow 40s linear infinite;
                 z-index: -1;
             }
 
             @keyframes twinkle {
-                0% { transform: translateY(0px); }
-                100% { transform: translateY(-100px); }
+                0% { transform: translateY(0px); opacity: 0.8; }
+                50% { opacity: 1; }
+                100% { transform: translateY(-100px); opacity: 0.8; }
+            }
+
+            @keyframes twinkleSlow {
+                0% { transform: translateY(0px) rotate(0deg); opacity: 0.6; }
+                50% { opacity: 0.9; }
+                100% { transform: translateY(-200px) rotate(360deg); opacity: 0.6; }
             }
 
             [data-kinde-control-select-text]{
@@ -156,57 +203,7 @@ const Layout = async ({request, context}) => {
                 opacity: 0.9;
             }
 
-            .c-footer {
-                border-top: 1px solid rgba(0, 119, 190, 0.3);
-                padding-block: 1.5rem;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                background: rgba(0, 0, 0, 0.6);
-                border-radius: 8px;
-                padding: 1.5rem;
-                backdrop-filter: blur(5px);
-            }
 
-            .c-footer-links {
-                display: flex;
-                gap: 1.5rem;
-                list-style: none;
-                margin: 0;
-                padding: 0;
-            }
-
-            .c-footer-links li a {
-                color: var(--star-wars-yellow);
-                text-decoration: none;
-                font-size: 0.9rem;
-                transition: all 0.3s ease;
-                text-shadow: 0 0 5px rgba(255, 232, 31, 0.3);
-            }
-
-            .c-footer-links li a:hover {
-                color: #FFFFFF;
-                text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-            }
-
-            .c-no-account-link {
-                color: #FFFFFF;
-                margin: 0;
-                font-size: 0.9rem;
-            }
-
-            .c-no-account-link a {
-                color: var(--star-wars-yellow);
-                text-decoration: none;
-                font-weight: 700;
-                transition: all 0.3s ease;
-                text-shadow: 0 0 5px rgba(255, 232, 31, 0.3);
-            }
-
-            .c-no-account-link a:hover {
-                color: #FFFFFF;
-                text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-            }
 
             /* Responsive design */
             @media (max-width: 768px) {
@@ -223,16 +220,6 @@ const Layout = async ({request, context}) => {
                 .c-widget h1 {
                     font-size: 1.5rem;
                 }
-                
-                .c-footer {
-                    flex-direction: column;
-                    gap: 1rem;
-                    text-align: center;
-                }
-                
-                .c-footer-links {
-                    justify-content: center;
-                }
             }
           `}
         </style>
@@ -246,22 +233,6 @@ const Layout = async ({request, context}) => {
               <div>{getKindeWidget()}</div>
             </div>
           </main>
-          <footer className="c-footer">
-            <p className="c-no-account-link">
-              No account? <a href={getKindeRegisterUrl()}>Sign up for free</a>
-            </p>
-            <ul className="c-footer-links">
-              <li>
-                <a href="">Privacy</a>
-              </li>
-              <li>
-                <a href="">Terms</a>
-              </li>
-              <li>
-                <a href="">Get help</a>
-              </li>
-            </ul>
-          </footer>
         </div>
       </body>
     </html>
