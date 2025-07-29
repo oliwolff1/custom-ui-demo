@@ -50,6 +50,121 @@ const Layout = async ({request, context}) => {
                 --star-wars-yellow: #FFE81F;
                 --star-wars-dark: #000000;
                 --star-wars-gray: #333333;
+                
+                /* Kinde Widget Star Wars Styling */
+                --kinde-button-primary-background-color: var(--star-wars-blue);
+                --kinde-button-primary-color: #FFFFFF;
+                --kinde-button-primary-border-color: var(--star-wars-blue);
+                --kinde-button-primary-border-width: 2px;
+                --kinde-button-primary-border-radius: 0.25rem;
+                --kinde-button-primary-font-weight: 700;
+                --kinde-button-primary-text-transform: uppercase;
+                --kinde-button-primary-letter-spacing: 1px;
+                --kinde-button-primary-padding-block: 0.75rem;
+                --kinde-button-primary-padding-inline: 1.5rem;
+                --kinde-button-primary-box-shadow: 0 0 15px rgba(0, 119, 190, 0.5);
+                --kinde-button-primary-transition: all 0.3s ease;
+                
+                --kinde-button-primary-background-color-hover: #005a8f;
+                --kinde-button-primary-color-hover: #FFFFFF;
+                --kinde-button-primary-box-shadow-hover: 0 0 25px rgba(0, 119, 190, 0.8);
+                --kinde-button-primary-transform-hover: scale(1.02);
+                
+                --kinde-button-primary-background-color-focus: var(--star-wars-blue);
+                --kinde-button-primary-border-color-focus: var(--star-wars-yellow);
+                --kinde-button-primary-box-shadow-focus: 0 0 20px rgba(255, 232, 31, 0.6);
+                
+                --kinde-button-secondary-background-color: transparent;
+                --kinde-button-secondary-color: var(--star-wars-yellow);
+                --kinde-button-secondary-border-color: var(--star-wars-yellow);
+                --kinde-button-secondary-border-width: 2px;
+                --kinde-button-secondary-border-radius: 0.25rem;
+                --kinde-button-secondary-font-weight: 700;
+                --kinde-button-secondary-text-transform: uppercase;
+                --kinde-button-secondary-letter-spacing: 1px;
+                --kinde-button-secondary-padding-block: 0.75rem;
+                --kinde-button-secondary-padding-inline: 1.5rem;
+                --kinde-button-secondary-box-shadow: 0 0 15px rgba(255, 232, 31, 0.3);
+                
+                --kinde-button-secondary-background-color-hover: rgba(255, 232, 31, 0.1);
+                --kinde-button-secondary-color-hover: #FFFFFF;
+                --kinde-button-secondary-box-shadow-hover: 0 0 25px rgba(255, 232, 31, 0.6);
+                --kinde-button-secondary-transform-hover: scale(1.02);
+                
+                --kinde-control-background-color: rgba(0, 0, 0, 0.8);
+                --kinde-control-border-color: var(--star-wars-blue);
+                --kinde-control-border-width: 2px;
+                --kinde-control-border-radius: 0.25rem;
+                --kinde-control-color: #FFFFFF;
+                --kinde-control-font-family: var(--kinde-base-font-family);
+                --kinde-control-padding-block: 0.75rem;
+                --kinde-control-padding-inline: 1rem;
+                --kinde-control-box-shadow: inset 0 0 10px rgba(0, 119, 190, 0.2);
+                --kinde-control-transition: all 0.3s ease;
+                
+                --kinde-control-background-color-focus: rgba(0, 0, 0, 0.9);
+                --kinde-control-border-color-focus: var(--star-wars-yellow);
+                --kinde-control-box-shadow-focus: 0 0 15px rgba(255, 232, 31, 0.4), inset 0 0 10px rgba(0, 119, 190, 0.2);
+                
+                --kinde-control-label-color: var(--star-wars-yellow);
+                --kinde-control-label-font-weight: 700;
+                --kinde-control-label-font-family: var(--kinde-base-font-family);
+                --kinde-control-label-text-transform: uppercase;
+                --kinde-control-label-letter-spacing: 0.5px;
+                --kinde-control-label-spacing: 0.5rem;
+                
+                --kinde-text-link-color: var(--star-wars-yellow);
+                --kinde-text-link-text-decoration-line: none;
+                --kinde-text-link-font-weight: 700;
+                --kinde-text-link-transition: all 0.3s ease;
+                --kinde-text-link-text-shadow: 0 0 5px rgba(255, 232, 31, 0.3);
+                
+                --kinde-text-link-color-hover: #FFFFFF;
+                --kinde-text-link-text-shadow-hover: 0 0 10px rgba(255, 255, 255, 0.8);
+                
+                --kinde-alert-banner-background-color: rgba(0, 119, 190, 0.1);
+                --kinde-alert-banner-border-color: var(--star-wars-blue);
+                --kinde-alert-banner-border-width: 1px;
+                --kinde-alert-banner-border-radius: 0.25rem;
+                --kinde-alert-banner-color: var(--star-wars-yellow);
+                --kinde-alert-banner-font-family: var(--kinde-base-font-family);
+                --kinde-alert-banner-padding: 1rem;
+                --kinde-alert-banner-box-shadow: 0 0 10px rgba(0, 119, 190, 0.3);
+                
+                --kinde-alert-banner-error-background-color: rgba(220, 53, 69, 0.1);
+                --kinde-alert-banner-error-border-color: #dc3545;
+                --kinde-alert-banner-error-color: #ff6b6b;
+                
+                --kinde-alert-banner-success-background-color: rgba(40, 167, 69, 0.1);
+                --kinde-alert-banner-success-border-color: #28a745;
+                --kinde-alert-banner-success-color: #51cf66;
+                
+                --kinde-layout-widget-spacing: 1.5rem;
+                --kinde-layout-widget-background-color: transparent;
+                --kinde-layout-widget-border-radius: 0;
+                --kinde-layout-widget-padding: 0;
+                
+                --kinde-divider-color: rgba(0, 119, 190, 0.3);
+                --kinde-divider-border-width: 1px;
+                
+                --kinde-heading-color: var(--star-wars-yellow);
+                --kinde-heading-font-family: var(--kinde-base-font-family);
+                --kinde-heading-font-weight: 900;
+                --kinde-heading-text-transform: uppercase;
+                --kinde-heading-letter-spacing: 2px;
+                --kinde-heading-text-shadow: 0 0 10px rgba(255, 232, 31, 0.5);
+                
+                --kinde-text-color: #FFFFFF;
+                --kinde-text-font-family: var(--kinde-base-font-family);
+                --kinde-text-opacity: 0.9;
+                
+                /* Dark mode overrides */
+                --kinde-button-primary-background-color-dark: var(--star-wars-blue);
+                --kinde-button-primary-color-dark: #FFFFFF;
+                --kinde-control-background-color-dark: rgba(0, 0, 0, 0.8);
+                --kinde-control-color-dark: #FFFFFF;
+                --kinde-text-color-dark: #FFFFFF;
+                --kinde-heading-color-dark: var(--star-wars-yellow);
             }
 
             body {
