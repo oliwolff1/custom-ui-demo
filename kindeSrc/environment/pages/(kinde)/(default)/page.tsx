@@ -69,6 +69,10 @@ const Layout = async ({request, context}) => {
                 display: flex;
                 gap: 1.5rem;
             }
+            .c-header img {
+                max-width: 120px;
+                height: auto;
+            }
           `}
         </style>
       </head>
