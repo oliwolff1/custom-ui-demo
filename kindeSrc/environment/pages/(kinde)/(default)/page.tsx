@@ -51,8 +51,10 @@ const Layout = async ({request, context}) => {
             }
             .c-container {
               padding: 1.5rem;
-              display: grid;
-              gap: 230px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              min-height: 100vh;
             }
             .c-widget {
                 max-width: 400px;
