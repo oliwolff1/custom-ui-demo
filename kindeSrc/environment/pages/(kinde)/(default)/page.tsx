@@ -178,46 +178,11 @@ const Layout = async ({request, context}) => {
                 text-decoration: underline !important;
             }
 
-            /* Add Ebolt logo to top-left */
-            .ebolt-logo {
-                position: fixed;
-                top: 1.5rem;
-                left: 1.5rem;
-                display: flex;
-                align-items: center;
-                gap: 0.5rem;
-                z-index: 10;
-            }
 
-            .ebolt-icon {
-                width: 24px;
-                height: 24px;
-                background-color: #374151;
-                border-radius: 4px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .ebolt-icon::before {
-                content: '⚙';
-                color: white;
-                font-size: 12px;
-            }
-
-            .ebolt-text {
-                color: #374151;
-                font-weight: 600;
-                font-size: 1rem;
-            }
           `}
         </style>
       </head>
       <body>
-        <div className="ebolt-logo">
-          <div className="ebolt-icon"></div>
-          <span className="ebolt-text">Ebolt</span>
-        </div>
         <div data-kinde-root="/admin" className="c-container">
           <main>
             <div className="c-widget">
