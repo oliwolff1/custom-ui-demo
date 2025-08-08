@@ -30,34 +30,74 @@ const Layout = async ({request, context}) => {
         <style nonce={getKindeNonce()}>
           {`:root {
           ${setKindeDesignerCustomProperties({
-            baseBackgroundColor: "#fff",
-            baseLinkColor: "#230078",
-            buttonBorderRadius: "0.5rem",
-            primaryButtonBackgroundColor: "#230078",
-            primaryButtonColor: "#fff",
-            inputBorderRadius: "0.5rem"
+            baseBackgroundColor: "#EAF2FF",
+            baseLinkColor: "#0EA5E9",
+            buttonBorderRadius: "0.75rem",
+            primaryButtonBackgroundColor: "#111827",
+            primaryButtonColor: "#FFFFFF",
+            inputBorderRadius: "0.75rem"
           })}}
           `}
         </style>
         <style nonce={getKindeNonce()}>
           {`
             :root {
-                --kinde-base-color: rgb(12, 0, 32);
+                --kinde-base-color: #0C0020;
+                --kinde-surface-color: #FFFFFF;
+                --kinde-surface-border: #E6E7EB;
+                --kinde-muted-color: #667085;
+                --kinde-accent-color: #0EA5E9;
+                --kinde-card-shadow: #0000001a;
                 --kinde-base-font-family: -apple-system, system-ui, BlinkMacSystemFont, Helvetica, Arial, Segoe UI, Roboto, sans-serif;
             }
 
             [data-kinde-control-select-text]{
-                background-color: rgb(250, 250, 251);
+                background-color: #FAFAFB;
             }
             .c-container {
-              padding: 1.5rem;
+              min-height: 100vh;
+              padding: 2rem;
               display: grid;
-              gap: 230px;
+              place-items: center;
+              background: radial-gradient(1200px 600px at 50% -100px, #EAF2FF 0%, #FFFFFF 60%) ,
+                          linear-gradient(180deg, #EAF2FF 0%, #FFFFFF 100%);
             }
             .c-widget {
-                max-width: 400px;
+                max-width: 420px;
                 width: 100%;
-                margin: 0px auto;
+                margin: 0 auto;
+                background: var(--kinde-surface-color);
+                border: 1px solid var(--kinde-surface-border);
+                border-radius: 1.25rem;
+                box-shadow: 0 12px 30px var(--kinde-card-shadow);
+                padding: 2rem;
+                backdrop-filter: saturate(120%);
+            }
+            .c-widget h1 {
+              margin: 0 0 0.5rem 0;
+              font-size: 1.375rem;
+              line-height: 1.3;
+              color: var(--kinde-base-color);
+              text-align: center;
+            }
+            .c-widget p.c-subtitle {
+              margin: 0 0 1rem 0;
+              color: var(--kinde-muted-color);
+              text-align: center;
+              font-size: 0.95rem;
+            }
+
+            /* Email-only experience: hide password, forgot password, dividers and social sign-in */
+            [data-kinde-control*="password"],
+            [data-kinde-action*="forgot"],
+            [data-kinde-section*="social"],
+            [data-kinde-divider*="or"] {
+              display: none !important;
+            }
+
+            /* Make primary button full width for a clean single-action look */
+            [data-kinde-control*="primary-button"] {
+              width: 100%;
             }
             .c-footer {
               border-top: 1px solid rgba(12, 0, 32, 0.08);
@@ -74,13 +114,10 @@ const Layout = async ({request, context}) => {
       </head>
       <body>
         <div data-kinde-root="/admin" className="c-container">
-          <header className="c-header">
-            <img src={getLogoUrl()} alt={context.widget.content.logo_alt} />
-          </header>
           <main>
             <div className="c-widget">
-              <h1>{context.widget.content.heading}</h1>
-              <p>{context.widget.content.description}</p>
+              <h1>Sign in with email</h1>
+              <p className="c-subtitle">Make a new doc to bring your words, data, and teams together. For free</p>
               <div>{getKindeWidget()}</div>
             </div>
           </main>
