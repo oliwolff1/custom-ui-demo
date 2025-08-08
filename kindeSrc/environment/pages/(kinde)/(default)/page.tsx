@@ -96,11 +96,9 @@ const Layout = async ({request, context}) => {
             .c-widget {
                 width: 100%;
                 max-width: 480px;
-                background: rgba(255, 255, 255, 0.25);
-                backdrop-filter: blur(20px);
-                -webkit-backdrop-filter: blur(20px);
+                background: #ffffff;
                 border-radius: 1rem;
-                border: 1px solid rgba(255, 255, 255, 0.3);
+                border: 1px solid rgba(0, 0, 0, 0.1);
                 box-shadow: 
                     0 8px 32px rgba(0, 0, 0, 0.1),
                     0 4px 16px rgba(0, 0, 0, 0.05);
