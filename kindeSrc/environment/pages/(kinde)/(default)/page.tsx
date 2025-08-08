@@ -217,7 +217,10 @@ const Layout = async ({request, context}) => {
 
             /* Hide any other elements we don't want */
             [data-kinde-control="logo"],
-            [data-kinde-control="brand"] {
+            [data-kinde-control="brand"],
+            [data-kinde-control="kinde-logo"],
+            .kinde-logo,
+            .kinde-brand {
                 display: none !important;
             }
 
